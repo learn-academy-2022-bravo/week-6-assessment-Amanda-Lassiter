@@ -13,17 +13,18 @@
 // --------------------1) Create a function that takes in an array of objects and returns an array with a sentence about each person with their name capitalized.
 
 // a) Create a test with an expect statement using the variable provided.
-
+//describe the test
 describe("capitalizedNames", () => {
   //describe what the test does
   it("Takes in an array of objects and returns an array with a sentence about each person with their name capitalized", () => {
-    //variable given
+    //variable given (object array)
     const people = [
+      //Objects are in key:value pairs, with name and occupation as keys and the added information as values, respectively. 
       { name: "ford prefect", occupation: "a hitchhiker" },
       { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
       { name: "arthur dent", occupation: "a radio employee" }
     ]
-  //expected outputs
+  //expected output 
   expect(capitalizedNames(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
 })
 })
@@ -36,11 +37,12 @@ describe("capitalizedNames", () => {
 //Function name: capitalizedNames
 //Input: array of objects
 //Output: sentence including person's name and occupation, with their name capitalized
-//
+//Pass array to make the function dynamic
 const capitalizedNames = (array) => {
+ //use destructuring to return a sentence with information about each person
   return `${people.name} is ${people.occupation}`
 }
-
+//Use console.log to display output of function. The objective is to have a sentence for each person in array format. I passed people here as the variable. 
 console.log(capitalizedNames(people))
 
 //I'm receiving a "people is not defined" error. I am referencing the JavaScript Objects material in our syllabus, which has an example a little similar to this one. Could it be that I have to call upon each name individually? 
